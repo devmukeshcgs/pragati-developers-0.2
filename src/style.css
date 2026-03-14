@@ -92,9 +92,9 @@ nav {
 
 #floor-svg {
   width: 100%;
-  max-width: 800px;
-  max-width: 90vw;
-  max-height: 90vh;
+  /* max-width: 800px; */
+  max-width: 95vw;
+  max-height: 95vh;
   height: auto;
 }
 
@@ -108,14 +108,18 @@ nav {
   top: 0;
   bottom: 0;
   z-index: 1000;
-  padding: 1rem;
-}
+  padding: 0rem;
+  /* background: #333; */
+  /* filter: blur(2px);
+   */
+  backdrop-filter: blur(10px);
+   transition: filter 0.3s ease;}
 
 .flats-list,
 .flat-details {
-  background: #333;
+  background: #0000006c;
   padding: 1rem;
-  border-radius: 8px;
+  border-radius: 0px;
 }
 
 #flats-select {

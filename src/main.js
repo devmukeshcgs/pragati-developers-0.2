@@ -48,6 +48,9 @@ document.querySelector("#app").innerHTML = `
 
 let svgDoc = null;
 let currentData = [];
+
+// Hide side-panel initially
+document.querySelector('.side-panel').style.display = 'none';
 let selectedBuilding = "";
 let selectedFloor = "";
 let floorMapping = {};
@@ -105,6 +108,7 @@ buildingSelect.addEventListener("change", function () {
     '<option value="">Select Flat</option>';
   document.getElementById("flat-info").innerHTML = "";
   document.getElementById("floor-svg").data = "";
+  document.querySelector('.side-panel').style.display = 'none';
 
   if (selectedBuilding) {
     // Load Excel for the building
@@ -152,6 +156,7 @@ document.getElementById("floor-select").addEventListener("change", function () {
   document.getElementById("flats-select").innerHTML =
     '<option value="">Select Flat</option>';
   document.getElementById("flat-info").innerHTML = "";
+  document.querySelector('.side-panel').style.display = 'none';
 
   if (selectedFloor) {
     // Load SVG for building-floor
@@ -209,6 +214,7 @@ document.getElementById("flats-select").addEventListener("change", function () {
   // Re-color sold flats red
   colorSoldFlats();
   if (selectedFlatNo) {
+    document.querySelector('.side-panel').style.display = 'flex';
     const flats = currentData.filter((row) => row.Floor == selectedFloor);
     const flat = flats.find((f) => (f["Flat No."] || f.Flat) == selectedFlatNo);
     if (flat && flat.Sold && flat.Sold.toLowerCase() === "yes") {
@@ -236,6 +242,7 @@ document.getElementById("flats-select").addEventListener("change", function () {
       }
     }
   } else {
+    document.querySelector('.side-panel').style.display = 'none';
     hideFlatDetails();
   }
 });
