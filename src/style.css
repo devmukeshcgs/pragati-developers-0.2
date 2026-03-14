@@ -7,6 +7,11 @@
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -17,18 +22,23 @@ body {
   margin: 0;
   min-height: 100vh;
 }
-
+h1,
+h2,
+h3 {
+  margin: 0;
+}
 #app {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 header {
+  padding: 1rem;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 1rem;
   flex-wrap: nowrap;
   align-content: center;
@@ -40,7 +50,19 @@ header {
   background-color: #333;
   z-index: 999;
 }
-
+nav {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+#building-details {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+}
 .container {
   display: flex;
   gap: 2rem;
@@ -51,7 +73,7 @@ header {
   gap: 1rem;
   justify-content: flex-start;
   align-items: stretch;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .controls select {
@@ -77,7 +99,7 @@ header {
 }
 
 .side-panel {
-  width: 200px;
+  /* width: 200px; */
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -94,7 +116,6 @@ header {
   background: #333;
   padding: 1rem;
   border-radius: 8px;
-
 }
 
 #flats-select {
@@ -153,7 +174,16 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-
+footer {
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 0.9em;
+  color: #888;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
