@@ -1,0 +1,16 @@
+{
+  "name": "Pragati Developers",
+  "short_name": "PragatiDev",
+  "description": "Flat selection and details app for Pragati Developers",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#242424",
+  "theme_color": "#333",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+const CACHE_NAME = 'pragati-dev-v1';
+const urlsToCache = [
+  '/',
+  '/src/main.js',
+  '/src/style.css',
+  '/manifest.json',
+  '/vite.svg'
+];
+
+self.addEventListener('install', event => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then(cache => cache.addAll(urlsToCache))
+  );
+});
+
+self.addEventListener('fetch', event => {
+  event.respondWith(
+    caches.match(event.request)
+      .then(response => response || fetch(event.request))
+  );
+});
