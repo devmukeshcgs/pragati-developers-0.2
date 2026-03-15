@@ -18,7 +18,7 @@ const Header = ({
   return (
     <header>
       <nav>
-        <div id="company-name"><b>🏗️ PRAGATI DEVELOPERS</b></div>
+        <div id="company-name"><b>🔺 PRAGATI DEVELOPERS</b></div>
         <div className="controls">
           <select value={selectedBuilding} onChange={onBuildingChange}>
             <option value="">🏢 Select Building</option>

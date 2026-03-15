@@ -7,7 +7,7 @@ const BuildingDetails = ({ selectedBuilding, floorStats }) => {
         <h1 id="building-name">{selectedBuilding ? `🏢 Building ${selectedBuilding}` : ""}</h1>
       </div>
       <div className="floor-info">
-        <p id="floor-name" dangerouslySetInnerHTML={{ __html: floorStats }}></p>
+        <div id="floor-name" dangerouslySetInnerHTML={{ __html: floorStats }}></div>
       </div>
     </div>
   );

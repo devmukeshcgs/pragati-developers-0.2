@@ -88,7 +88,7 @@ export const useBuildingData = () => {
       const totalFlats = floorFlats.length;
       const soldCount = floorFlats.filter(f => f.Sold && f.Sold.toLowerCase() === "yes").length;
       const unsoldCount = totalFlats - soldCount;
-      setFloorStats(`🏠 Total Flats: ${totalFlats}, ✅ Sold: ${soldCount}, ❌ Unsold: ${unsoldCount}`);
+      setFloorStats(`<span>🏠 Total Flats: ${totalFlats}</span> <span>✅ Sold: ${soldCount}</span> <span>❌ Unsold: ${unsoldCount}</span>`);
     } else {
       setSvgData("");
       setFloorStats("");
