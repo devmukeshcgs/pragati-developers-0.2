@@ -209,7 +209,30 @@ nav {
 .read-the-docs {
   color: #888;
 }
-
+#flat-info{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.fd{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  /* gap: 1rem; */
+  border: #a8a8a8 solid 1px;
+  border-radius: 4px;
+  padding: 0.5rem;
+}
+.label{
+  font-size: 0.9em;
+  color: #555;
+}
+.fd-val{
+  font-size: 1.25em;
+  color: #535353;
+}
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -273,7 +296,7 @@ footer {
 
 @media (max-width: 480px) {
   h1 {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
   header {
     flex-direction: column;
