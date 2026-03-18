@@ -3,7 +3,7 @@ import * as XLSX from "xlsx";
 import axios from 'axios';
 import buildingData from '../data/data.json';
 
-const useGoogleDrive = true;
+const useGoogleDrive = false;
 const buildings = buildingData.map(b => b.building);
 const buildingNames = buildingData.reduce((acc, b) => {
   acc[b.building] = b.name;
