@@ -96,6 +96,16 @@ nav {
   align-content: center;
   align-items: center;
 }
+
+.error-banner {
+  padding: 0.75rem 1rem;
+  background: rgba(255, 60, 60, 0.15);
+  color: #b20f0f;
+  border: 1px solid rgba(255, 60, 60, 0.4);
+  border-radius: 6px;
+  margin: 0 1rem 1rem;
+}
+
 .container {
   display: flex;
   gap: 0rem;

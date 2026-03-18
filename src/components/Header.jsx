@@ -35,11 +35,14 @@ const Header = ({
             onChange={onFloorChange}
             disabled={!selectedBuilding}>
             <option value="">🏠 Select Floor</option>
-            {floors.map((floor) => (
-              <option key={floor} value={floor}>
-                🏠 Floor {floorMapping[floor] || floor}
-              </option>
-            ))}
+            {floors.map((floor) => {
+              console.log(floor);
+              return (
+                <option key={floor} value={floor}>
+                  🏠 {floorMapping[floor] || floor}
+                </option>
+              );
+            })}
           </select>
           <select
             value={selectedFlat}

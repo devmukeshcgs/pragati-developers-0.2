@@ -15,8 +15,15 @@
     },
     {
         "building": "B03",
-        "location": "Kalyan-Khadak pada",
-        "name": "Pragati Developers - Kalyan",
+        "location": "Mumbai",
+        "name": "Pragati Developers - Mumbai",
+        "id": "1hyormQRhM0rLMuTQe0PRuSo_R8ZEqoBF",
+        "gSheetLink": "https://docs.google.com/spreadsheets/d/1hyormQRhM0rLMuTQe0PRuSo_R8ZEqoBF/export?format=xlsx"
+    },
+    {
+        "building": "B04",
+        "location": "Thana",
+        "name": "Pragati Developers - Thana",
         "id": "1hyormQRhM0rLMuTQe0PRuSo_R8ZEqoBF",
         "gSheetLink": "https://docs.google.com/spreadsheets/d/1hyormQRhM0rLMuTQe0PRuSo_R8ZEqoBF/export?format=xlsx"
     }

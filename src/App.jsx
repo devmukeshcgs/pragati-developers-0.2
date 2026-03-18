@@ -24,7 +24,9 @@ function App() {
     buildings,
     buildingNames,
     loading,
+    error,
     setSvgDoc,
+    setError,
     handleBuildingChange,
     handleFloorChange,
     handleFlatChange,
@@ -77,17 +79,23 @@ function App() {
         loading={loading}
         buildingNames={buildingNames}
       />
-        <div className="container">
-          <FloorPlan
-            svgData={svgData}
-            onSvgLoad={handleSvgLoad}
-          />
-          <SidePanel
-            flatDetails={flatDetails}
-            isVisible={sidePanelVisible}
-          />
+      {error && (
+        <div className="error-banner" role="alert">
+          {error}
         </div>
-      </main>
+      )}
+      <div className="container">
+        <FloorPlan
+          svgData={svgData}
+          onSvgLoad={handleSvgLoad}
+          onSvgError={setError}
+        />
+        <SidePanel
+          flatDetails={flatDetails}
+          isVisible={sidePanelVisible}
+        />
+      </div>
+    </main>
       <Footer />
     </>
   );
