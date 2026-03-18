@@ -99,6 +99,11 @@ nav {
 .container {
   display: flex;
   gap: 0rem;
+  align-items: stretch;
+  align-content: center;
+  justify-content: center;
+  height: 100%;
+  background: burlywood;
 }
 
 .controls {
@@ -125,6 +130,10 @@ nav {
   flex: 1;
   display: flex;
   justify-content: center;
+  width: 80vw;
+  align-items: stretch;
+  align-content: center;
+  justify-content: center; 
 }
 
 #floor-svg {
@@ -136,6 +145,7 @@ nav {
 }
 
 .side-panel {
+  width: 20vw;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -198,6 +208,25 @@ nav {
   background: var(--button-hover);
 }
 
+/* Loader */
+.loader {
+  display: inline-block;
+  margin-left: 1rem;
+  font-size: 1rem;
+  color: var(--text-color);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
 .theme-toggle-icon {
   font-size: 1.2rem;
 }
@@ -209,14 +238,14 @@ nav {
 .read-the-docs {
   color: #888;
 }
-#flat-info{
+#flat-info {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-top: 1rem;
 }
-.fd{
+.fd {
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -225,11 +254,11 @@ nav {
   border-radius: 4px;
   padding: 0.5rem;
 }
-.label{
+.label {
   font-size: 0.9em;
   color: #555;
 }
-.fd-val{
+.fd-val {
   font-size: 1.25em;
   color: #535353;
 }
@@ -279,22 +308,9 @@ footer {
 }
 
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .container {
-    flex-direction: column;
-  }
-
-  .side-panel {
-    width: 100%;
-  }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   h1 {
     font-size: 1.25rem;
   }
@@ -335,13 +351,19 @@ footer {
     justify-content: space-around;
     align-items: center;
   }
-  .floor-info #floor-name span{
+  .floor-info #floor-name span {
     display: block;
     margin: 0.25rem 0;
   }
-
+  .flats-list,
+  .flat-details {
+    max-width: 100vw;
+  }
   .container {
     flex-direction: column;
+  }
+  .floor-plan {
+    width: 100vw;
   }
 
   .side-panel {

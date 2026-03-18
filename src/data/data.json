@@ -1,0 +1,23 @@
+[
+    {
+        "building": "B01",
+        "location": "Kalyan",
+        "name": "Pragati Developers",
+        "id": "1TlfNpryzuEXTF42fVN1XINDm3vZtRweP",
+        "gSheetLink": "https://docs.google.com/spreadsheets/d/1TlfNpryzuEXTF42fVN1XINDm3vZtRweP/export?format=xlsx"
+    },
+    {
+        "building": "B02",
+        "location": "Dombiwali",
+        "name": "Pragati Developers - Dombiwali",
+        "id": "1PJTnIYvsik57lGpM1Ewk1HGrJEOkgwJ9",
+        "gSheetLink": "https://docs.google.com/spreadsheets/d/1PJTnIYvsik57lGpM1Ewk1HGrJEOkgwJ9/export?format=xlsx"
+    },
+    {
+        "building": "B03",
+        "location": "Kalyan-Khadak pada",
+        "name": "Pragati Developers - Kalyan",
+        "id": "1hyormQRhM0rLMuTQe0PRuSo_R8ZEqoBF",
+        "gSheetLink": "https://docs.google.com/spreadsheets/d/1hyormQRhM0rLMuTQe0PRuSo_R8ZEqoBF/export?format=xlsx"
+    }
+]

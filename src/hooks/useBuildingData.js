@@ -1,13 +1,22 @@
 import { useState, useEffect } from 'react';
 import * as XLSX from "xlsx";
+import axios from 'axios';
+import buildingData from '../data/data.json';
 
-const buildingIds = {
-  "01": "YOUR_FILE_ID_FOR_BUILDING_01",
-  "02": "YOUR_FILE_ID_FOR_BUILDING_02",
-};
-
-const useGoogleDrive = false;
-const buildings = ["01", "02"];
+const useGoogleDrive = true;
+const buildings = buildingData.map(b => b.building);
+const buildingNames = buildingData.reduce((acc, b) => {
+  acc[b.building] = b.name;
+  return acc;
+}, {});
+const buildingLinks = buildingData.reduce((acc, b) => {
+  acc[b.building] = b.gSheetLink;
+  return acc;
+}, {});
+const buildingIds = buildingData.reduce((acc, b) => {
+  acc[b.building] = b.id;
+  return acc;
+}, {});
 
 export const useBuildingData = () => {
   const [selectedBuilding, setSelectedBuilding] = useState("");
@@ -22,14 +31,16 @@ export const useBuildingData = () => {
   const [svgData, setSvgData] = useState("");
   const [svgDoc, setSvgDoc] = useState(null);
   const [sidePanelVisible, setSidePanelVisible] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const loadBuildingData = async (building) => {
+    setLoading(true);
     const excelUrl = useGoogleDrive
-      ? `https://drive.google.com/uc?export=download&id=${buildingIds[building]}`
+      ? `/api/sheets/d/${buildingIds[building]}/export?format=xlsx`
       : `/building${building}.xlsx`;
     try {
-      const response = await fetch(excelUrl);
-      const buffer = await response.arrayBuffer();
+      const response = await axios.get(excelUrl, { responseType: 'arraybuffer' });
+      const buffer = response.data;
       const workbook = XLSX.read(buffer, { type: "array" });
       const sheetName = workbook.SheetNames[0];
       const worksheet = workbook.Sheets[sheetName];
@@ -48,10 +59,12 @@ export const useBuildingData = () => {
       setCurrentData(data);
       const uniqueFloors = [...new Set(data.map((row) => row.Floor))].sort();
       setFloors(uniqueFloors);
-      const mapping = building === "01" ? { 7: "1", 12: "2", 13: "3" } : {};
+      const mapping = building === "B01" ? { 7: "1", 12: "2", 13: "3" } : {};
       setFloorMapping(mapping);
     } catch (err) {
       console.error("Error loading Excel:", err);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -82,7 +95,8 @@ export const useBuildingData = () => {
     setFlats([]);
     setSidePanelVisible(false);
     if (floor) {
-      setSvgData(`/building${selectedBuilding}-floor-${floorMapping[floor] || floor}.svg`);
+      const buildingNum = selectedBuilding.replace('B', '');
+      setSvgData(`/building${buildingNum}-floor-${floorMapping[floor] || floor}.svg`);
       const floorFlats = currentData.filter((row) => row.Floor == floor);
       setFlats(floorFlats);
       const totalFlats = floorFlats.length;
@@ -126,6 +140,8 @@ export const useBuildingData = () => {
     svgDoc,
     sidePanelVisible,
     buildings,
+    buildingNames,
+    loading,
 
     // Actions
     setSvgDoc,

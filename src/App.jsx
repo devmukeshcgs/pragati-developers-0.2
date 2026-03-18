@@ -22,6 +22,8 @@ function App() {
     svgDoc,
     sidePanelVisible,
     buildings,
+    buildingNames,
+    loading,
     setSvgDoc,
     handleBuildingChange,
     handleFloorChange,
@@ -72,6 +74,8 @@ function App() {
       <BuildingDetails
         selectedBuilding={selectedBuilding}
         floorStats={floorStats}
+        loading={loading}
+        buildingNames={buildingNames}
       />
         <div className="container">
           <FloorPlan

@@ -71,7 +71,7 @@ const Header = ({
               //   </option>
               // );
               return (
-                <option key={flatNo} value={flatNo}>
+                <option key={1 + flatNo} value={flatNo}>
                   🏡 Flat {flatNo} {statusEmoji}
                 </option>
               );
