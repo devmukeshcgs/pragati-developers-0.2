@@ -37,9 +37,12 @@ export const useBuildingData = () => {
   const loadBuildingData = async (building) => {
     setLoading(true);
     setError(null);
+    const buildingNum = String(
+      Number(building.replace(/^B/i, ''))
+    ).padStart(2, '0');
     const excelUrl = useGoogleDrive
       ? `/api/sheets/d/${buildingIds[building]}/export?format=xlsx`
-      : `/building${building}.xlsx`;
+      : `/building${buildingNum}.xlsx`;
     try {
       const response = await axios.get(excelUrl, { responseType: 'arraybuffer' });
       const buffer = response.data;
