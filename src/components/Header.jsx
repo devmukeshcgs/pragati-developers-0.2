@@ -26,7 +26,7 @@ const Header = ({
             <option value="">🏢 Select Building</option>
             {buildings.map((building) => (
               <option key={building} value={building}>
-                🏢 Building {building}
+                Building {building}
               </option>
             ))}
           </select>
@@ -36,10 +36,10 @@ const Header = ({
             disabled={!selectedBuilding}>
             <option value="">🏠 Select Floor</option>
             {floors.map((floor) => {
-              console.log(floor);
+              // console.log(floor);
               return (
                 <option key={floor} value={floor}>
-                  🏠 {floorMapping[floor] || floor}
+                  {floorMapping[floor] || floor}
                 </option>
               );
             })}
@@ -75,7 +75,7 @@ const Header = ({
               // );
               return (
                 <option key={1 + flatNo} value={flatNo}>
-                  🏡 Flat {flatNo} {statusEmoji}
+                  Flat {flatNo} {statusEmoji}
                 </option>
               );
             })}

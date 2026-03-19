@@ -6,9 +6,9 @@ export const colorSoldFlats = (svgDoc, selectedFloor, currentData) => {
       const element = svgDoc.querySelector(`[id="Layer_${flatNo}"]`);
       if (element && flat.Sold && flat.Sold.toLowerCase() === "yes") {
         const polygons = element.querySelectorAll("polygon, path");
-        polygons.forEach((p) => (p.style.fill = "red"));
+        polygons.forEach((p) => (p.style.fill = "#ff000059"));
         if (element.tagName === "polygon" || element.tagName === "path") {
-          element.style.fill = "red";
+          element.style.fill = "#ff000059";
         }
       }
     });
@@ -36,12 +36,12 @@ export const highlightFlat = (flatNo, svgDoc, currentData, selectedFloor) => {
   if (flatNo && svgDoc) {
     const element = svgDoc.querySelector(`[id="Layer_${flatNo}"]`);
     if (element) {
-      element.style.stroke = "#FF0000";
+      element.style.stroke = "#ff000059";
       element.style.strokeWidth = "3";
       const polygons = element.querySelectorAll("polygon, path");
-      polygons.forEach((p) => (p.style.fill = "#ADFF2F"));
+      polygons.forEach((p) => (p.style.fill = "#acff2fad"));
       if (element.tagName === "polygon" || element.tagName === "path") {
-        element.style.fill = "#ADFF2F";
+        element.style.fill = "#acff2fad";
       }
     }
   }

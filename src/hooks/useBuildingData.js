@@ -66,7 +66,7 @@ export const useBuildingData = () => {
       setCurrentData(data);
       // Extract unique floors for the dropdown
       const uniqueFloors = [...new Set(data.map((row) => row.Floor))].sort();
-      console.log("Unique Floors", uniqueFloors);
+      // console.log("Unique Floors", uniqueFloors);
       
       // Remove any falsy values (like undefined or null) from the floors list
       const cleanedFloors = uniqueFloors.filter(Boolean);
@@ -76,7 +76,7 @@ export const useBuildingData = () => {
       const mapping = Object.fromEntries(
         cleanedFloors.map((floor) => [floor, `f${floor}`])
       );
-      console.log("floorMapping", mapping);
+      // console.log("floorMapping", mapping);
       setFloorMapping(mapping);
     } catch (err) {
       console.error("Error loading Excel:", err);
