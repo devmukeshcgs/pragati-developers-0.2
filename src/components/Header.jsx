@@ -17,9 +17,10 @@ const Header = ({
 
   return (
     <header>
-      <nav>
+      <nav className="flex justify-between items-center px-6 md:px-12 py-5 bg-white/80 backdrop-blur-md border-b sticky top-0 z-50">
+        {" "}
         <div id="company-name">
-          <b>🔺 PRAGATI DEVELOPERS</b>
+          <b>🔺Apartment Tracker</b>
         </div>
         <div className="controls">
           <select value={selectedBuilding} onChange={onBuildingChange}>
@@ -81,12 +82,12 @@ const Header = ({
             })}
           </select>
         </div>
-        <button className="theme-toggle" onClick={toggleTheme}>
+        {/* <button className="theme-toggle" onClick={toggleTheme}>
           <span className="theme-toggle-icon">
             {theme === "dark" ? "☀️" : "🌙"}
           </span>
           {theme === "dark" ? "Light" : "Dark"}
-        </button>
+        </button> */}
       </nav>
     </header>
   );
