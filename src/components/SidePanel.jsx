@@ -6,7 +6,7 @@ const SidePanel = ({ flatDetails, isVisible }) => {
       className="side-panel"
       style={{ display: isVisible ? "flex" : "none" }}>
       <div className="flat-details">
-        <h2>🏡 Flat Details</h2>
+        <h3>🏡 Flat Details</h3>
         <div id="flat-info">
           {flatDetails && (
             <>

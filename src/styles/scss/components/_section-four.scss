@@ -1,0 +1,38 @@
+@use "../abstracts/tokens" as *;
+
+.sec-3-bg {
+  background: url("../../../images/image-02.jpg") no-repeat center center;
+  background-size: cover;
+  z-index: 1;
+  background-blend-mode: multiply;
+  background-color: #2e2e2e;
+  padding: 64px 0px;
+}
+.sec-3-content {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: stretch;
+  gap: 24px;
+}
+.sec-3-content div {
+  padding: 32px;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.sec-3-content div h5 {
+  line-height: normal;
+  letter-spacing: auto;
+  font-weight: 500;
+}
+
+@include max-down($bp-xs) {
+  .sec-3-content {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,12 @@
+// Breakpoints — use with `@use '../abstracts/tokens' as *` in partials
+$bp-xs: 576px;
+$bp-sm: 768px;
+$bp-md: 992px;
+$bp-lg: 1200px;
+$bp-nav: 1024px;
+
+@mixin max-down($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}

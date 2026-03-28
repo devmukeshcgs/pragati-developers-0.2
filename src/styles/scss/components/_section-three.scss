@@ -1,0 +1,47 @@
+@use "../abstracts/tokens" as *;
+
+.prod-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+}
+.prod-content-header {
+  font-size: 30px;
+  line-height: normal;
+  letter-spacing: auto;
+  font-weight: 500;
+  color: var(--text-h);
+  background: var(--bg);
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  padding: 36px 48px;
+}
+.prod-content-category {
+  display: flex;
+  overflow-x: scroll;
+  gap: 12px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.prod-content-category::-webkit-scrollbar {
+  display: none;
+}
+
+@include max-down($bp-xs) {
+  .prod-content {
+    flex-direction: column;
+    padding: 12px;
+  }
+  .prod-content-header {
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    padding: 24px;
+    margin-bottom: 24px;
+  }
+  .prod-content-category {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}

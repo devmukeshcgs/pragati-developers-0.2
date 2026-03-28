@@ -1,0 +1,112 @@
+@use "../abstracts/tokens" as *;
+
+header {
+  background: var(--bg);
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 34px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 10px 34px;
+  @media (max-width: 1024px) {
+    padding: 20px 0;
+  }
+  .logo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+  }
+  nav {
+    display: flex;
+    gap: 0px;
+    ul {
+      display: flex;
+      gap: 0px;
+      list-style: none;
+      li {
+        a {
+          text-decoration: none;
+          color: var(--text);
+          font-size: 14px;
+          font-weight: 400;
+          padding: 16px 24px;
+          @media (max-width: 1024px) {
+            font-size: 16px;
+          }
+        }
+        &.active {
+          a {
+            color: var(--accent);
+          }
+        }
+      }
+      @media (max-width: 1024px) {
+        gap: 20px;
+      }
+    }
+  }
+
+  .l-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    a {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-content: center;
+      align-items: center;
+      margin-left: 16px;
+    }
+    .docker {
+      display: none;
+    }
+    @media (max-width: 1024px) {
+      display: block;
+    }
+  }
+}
+
+.mob-nav {
+  display: none;
+  position: absolute;
+  width: 100%;
+  width: calc(100% - 24px) !important;
+  background: var(--bg);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mob-nav ul li a {
+  text-decoration: none;
+  color: var(--text);
+  display: block;
+  padding: 10px 20px;
+}
+
+.mob-nav.open {
+  display: block;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@include max-down($bp-xs) {
+  header .container nav.mob-nav {
+    display: flex;
+  }
+  header .container nav {
+    display: none;
+  }
+  header .container .l-nav {
+    display: flex;
+  }
+  header .container .l-nav .docker {
+    display: block;
+  }
+}

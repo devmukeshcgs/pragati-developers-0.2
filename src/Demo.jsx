@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
-import { useBuildingData } from './hooks/useBuildingData';
-import { colorSoldFlats, highlightFlat } from './utils/svgUtils';
-import Header from './components/Header';
-import BuildingDetails from './components/BuildingDetails';
-import FloorPlan from './components/FloorPlan';
-import SidePanel from './components/SidePanel';
-import Footer from './components/Footer';
+import React, { useEffect } from "react";
+import { useBuildingData } from "./hooks/useBuildingData";
+import { colorSoldFlats, highlightFlat } from "./utils/svgUtils";
+import Header from "./components/Header";
+import BuildingDetails from "./components/BuildingDetails";
+import FloorPlan from "./components/FloorPlan";
+import SidePanel from "./components/SidePanel";
+import Footer from "./components/Footer";
 
 function Demo() {
   const {
@@ -34,11 +34,12 @@ function Demo() {
 
   useEffect(() => {
     // Register service worker
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
-          .then(registration => console.log('SW registered: ', registration))
-          .catch(error => console.log('SW registration failed: ', error));
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker
+          .register("/sw.js")
+          .then((registration) => console.log("SW registered: ", registration))
+          .catch((error) => console.log("SW registration failed: ", error));
       });
     }
   }, []);
@@ -72,31 +73,27 @@ function Demo() {
         onFloorChange={handleFloorChange}
         onFlatChange={handleFlatSelection}
       />
-      <main>
-      <BuildingDetails
-        selectedBuilding={selectedBuilding}
-        floorStats={floorStats}
-        loading={loading}
-        buildingNames={buildingNames}
-      />
-      {error && (
-        <div className="error-banner" role="alert">
-          {error}
+      <div>
+        <BuildingDetails
+          selectedBuilding={selectedBuilding}
+          floorStats={floorStats}
+          loading={loading}
+          buildingNames={buildingNames}
+        />
+        {error && (
+          <div className="error-banner" role="alert">
+            {error}
+          </div>
+        )}
+        <div className="container">
+          <FloorPlan
+            svgData={svgData}
+            onSvgLoad={handleSvgLoad}
+            onSvgError={setError}
+          />
+          <SidePanel flatDetails={flatDetails} isVisible={sidePanelVisible} />
         </div>
-      )}
-      <div className="container">
-        <FloorPlan
-          svgData={svgData}
-          onSvgLoad={handleSvgLoad}
-          onSvgError={setError}
-        />
-        <SidePanel
-          flatDetails={flatDetails}
-          isVisible={sidePanelVisible}
-        />
       </div>
-    </main>
-      <Footer />
     </>
   );
 }

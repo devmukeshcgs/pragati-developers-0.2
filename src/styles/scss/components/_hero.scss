@@ -1,0 +1,78 @@
+@use "../abstracts/tokens" as *;
+
+.hero-section {
+  display: flex;
+  background: var(--bg);
+  overflow: hidden;
+}
+.hero-section .container {
+  display: flex;
+}
+.hero-section-bg {
+  background: url("../../images/hero-bg.png") no-repeat center center;
+  background-size: cover;
+  z-index: -1;
+  height: 80vh;
+  background-blend-mode: multiply;
+  background-color: var(--bg);
+  backdrop-filter: blur(10px) saturate(150%);
+  -webkit-backdrop-filter: blur(10px);
+}
+.hero-content {
+  flex: 2;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  margin-left: 64px;
+}
+.hero-content h1 {
+  color: var(--text);
+}
+.hero-content h1 .h1-hilight {
+  color: var(--text);
+}
+.hero-content p {
+  color: var(--text);
+  margin-bottom: 12px;
+  font-weight: 400;
+}
+.hero-content p .p-hilight {
+  color: var(--text);
+  font-weight: 200;
+}
+.cta {
+  margin: 24px 0;
+}
+
+.hero-image {
+  flex: 1;
+  position: relative;
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+.hero-image img {
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+}
+
+@include max-down($bp-xs) {
+  .hero-content {
+    margin-left: 0px;
+    align-items: center;
+  }
+  .hero-content p {
+    text-align: center;
+  }
+  .cta {
+    text-align: center;
+  }
+  .cta button {
+    margin-bottom: 12px;
+  }
+}

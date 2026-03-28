@@ -1,0 +1,67 @@
+.custom-select {
+  width: 200px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #333;
+  background-color: var(--bg);
+  color: var(--text);
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+.custom-select:hover {
+  border-color: #888;
+}
+
+.custom-select:focus {
+  outline: none;
+  border-color: #00ffcc;
+}
+
+button {
+  display: inline-flex;
+  align-items: center;
+  background: var(--bg);
+  border: none;
+  padding: 10px;
+  line-height: normal;
+  letter-spacing: auto;
+  font-size: 16px;
+  border: 1px solid var(--border);
+  margin-bottom: 12px;
+  margin-right: 12px;
+}
+button:hover {
+  background: var(--bg);
+  cursor: pointer;
+}
+button.btn-red {
+  background: var(--bg);
+  color: var(--text);
+}
+button.btn-red:hover {
+  background: #cfcfcf;
+}
+
+.btn-capsule {
+  background: var(--bg);
+  border-radius: 9999px;
+  color: #74777f;
+  border: 1px solid var(--border);
+  flex: none;
+  padding: 12px 32px !important;
+}
+.btn-capsule:hover {
+  background: var(--bg);
+  color: #fff;
+}
+
+.btn-red {
+}

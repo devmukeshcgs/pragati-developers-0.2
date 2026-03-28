@@ -23,7 +23,10 @@ const Header = ({
           <b>🔺Apartment Tracker</b>
         </div>
         <div className="controls">
-          <select value={selectedBuilding} onChange={onBuildingChange}>
+          <select
+            className="custom-select"
+            value={selectedBuilding}
+            onChange={onBuildingChange}>
             <option value="">🏢 Select Building</option>
             {buildings.map((building) => (
               <option key={building} value={building}>
@@ -32,6 +35,7 @@ const Header = ({
             ))}
           </select>
           <select
+            className="custom-select"
             value={selectedFloor}
             onChange={onFloorChange}
             disabled={!selectedBuilding}>
@@ -46,6 +50,7 @@ const Header = ({
             })}
           </select>
           <select
+            className="custom-select"
             value={selectedFlat}
             onChange={onFlatChange}
             disabled={!selectedFloor}>
@@ -82,12 +87,6 @@ const Header = ({
             })}
           </select>
         </div>
-        {/* <button className="theme-toggle" onClick={toggleTheme}>
-          <span className="theme-toggle-icon">
-            {theme === "dark" ? "☀️" : "🌙"}
-          </span>
-          {theme === "dark" ? "Light" : "Dark"}
-        </button> */}
       </nav>
     </header>
   );

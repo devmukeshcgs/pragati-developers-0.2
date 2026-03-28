@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+// Design tokens & theme
+@use "scss/base/root";
+
+// Foundation
+@use "scss/base/typography";
+@use "scss/base/layout";
+
+// UI (aligned with React components)
+@use "scss/components/buttons";
+@use "scss/components/navigation";
+@use "scss/components/hero";
+@use "scss/components/section-common";
+@use "scss/components/section-two";
+@use "scss/components/section-three";
+@use "scss/components/section-four";
+@use "scss/components/section-five";
+@use "scss/components/section-six";
+
+// Page-specific
+@use "scss/pages/building";

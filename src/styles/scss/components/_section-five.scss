@@ -1,0 +1,44 @@
+@use "../abstracts/tokens" as *;
+
+.sec-4-bg {
+  background-color: var(--bg);
+}
+.sec-4-content {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: stretch;
+  gap: 24px;
+}
+.sec-4-content div {
+  flex: 1;
+  padding: 24px 48px;
+  background: var(--accent);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  flex-wrap: nowrap;
+}
+.sec-4-content div h5 {
+  color: var(--bg);
+  font-size: 36px;
+  line-height: normal;
+  letter-spacing: auto;
+  font-weight: 500;
+  margin: 0px;
+}
+.sec-4-content div p {
+  margin: 0px;
+  color: var(--bg);
+  text-transform: uppercase;
+}
+
+@include max-down($bp-xs) {
+  .sec-4-content {
+    flex-direction: column;
+    gap: 24px;
+  }
+}

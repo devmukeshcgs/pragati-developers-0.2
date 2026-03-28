@@ -1,0 +1,21 @@
+.sec-title {
+  text-align: center;
+}
+.sec-title::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 4px;
+  background: var(--red);
+  margin: 16px auto 0;
+}
+
+.sec-2,
+.sec-3,
+.sec-4 {
+  padding: 32px 0;
+}
+
+.sec-5 {
+  padding: 48px 0;
+}
