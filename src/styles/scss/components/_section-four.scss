@@ -1,11 +1,10 @@
 @use "../abstracts/tokens" as *;
 
 .sec-3-bg {
-  background: url("../../../images/image-02.jpg") no-repeat center center;
+  // background: url("../../../images/image-02.jpg") no-repeat center center;
   background-size: cover;
   z-index: 1;
   background-blend-mode: multiply;
-  background-color: #2e2e2e;
   padding: 64px 0px;
 }
 .sec-3-content {

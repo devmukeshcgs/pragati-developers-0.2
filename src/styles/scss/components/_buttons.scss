@@ -37,17 +37,12 @@ button {
   border: 1px solid var(--border);
   margin-bottom: 12px;
   margin-right: 12px;
-}
-button:hover {
-  background: var(--bg);
-  cursor: pointer;
-}
-button.btn-red {
-  background: var(--bg);
   color: var(--text);
 }
-button.btn-red:hover {
-  background: #cfcfcf;
+button:hover {
+  background: var(--text);
+  cursor: pointer;
+  color: var(--bg);
 }
 
 .btn-capsule {
@@ -59,9 +54,26 @@ button.btn-red:hover {
   padding: 12px 32px !important;
 }
 .btn-capsule:hover {
-  background: var(--bg);
+  background: var(--red);
   color: #fff;
 }
 
-.btn-red {
+.link {
+  // display: inline-flex;
+  // align-items: center;
+  background: var(--bg);
+  // border: none;
+  padding: 10px;
+  // line-height: normal;
+  // letter-spacing: auto;
+  // font-size: 16px;
+  // border: 1px solid var(--border);
+  // margin-bottom: 12px;
+  // margin-right: 12px;
+  color: var(--text);
+}
+.link:hover {
+  background: var(--text);
+  cursor: pointer;
+  color: var(--bg);
 }

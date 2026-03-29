@@ -2,6 +2,7 @@
 
 header {
   background: var(--bg);
+  position: relative;
 }
 
 header .container {
@@ -58,7 +59,8 @@ header .container {
     flex-wrap: nowrap;
     align-content: center;
     align-items: center;
-    a {
+    a,
+    button.docker {
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
@@ -68,6 +70,18 @@ header .container {
     }
     .docker {
       display: none;
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      font: inherit;
+      color: inherit;
+      margin-bottom: 0;
+      margin-right: 0;
+    }
+    button.docker:hover {
+      background: transparent;
+      color: inherit;
     }
     @media (max-width: 1024px) {
       display: block;
@@ -78,15 +92,24 @@ header .container {
 .mob-nav {
   display: none;
   position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
   width: 100%;
-  width: calc(100% - 24px) !important;
-  background: var(--bg);
+  // width: calc(100% - 24px) !important;
+  margin: 0 auto;
+  background: var(--text);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 50;
+  box-shadow: 0 8px 24px 6px rgb(12 12 12 / 50%);
 }
 
+.mob-nav ul li{
+  list-style: none;
+}
 .mob-nav ul li a {
   text-decoration: none;
-  color: var(--text);
+  color: var(--bg);
   display: block;
   padding: 10px 20px;
 }
@@ -95,6 +118,12 @@ header .container {
   display: block;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
+.mob-nav.open ul{
+
+}
+.mob-nav.open ul li{}
+.mob-nav.open ul li a{}
+
 
 @include max-down($bp-xs) {
   header .container nav.mob-nav {

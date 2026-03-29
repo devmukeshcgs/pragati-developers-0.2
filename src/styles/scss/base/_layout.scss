@@ -1,7 +1,7 @@
 @use "../abstracts/tokens" as *;
 
 body {
-  background-image: linear-gradient(180deg, var(--bg) 0%, #f3f1f3 100%);
+  // background-image: linear-gradient(180deg, var(--bg) 0%, #f3f1f3 100%);
   margin: 0;
   padding: 0;
 }
@@ -63,3 +63,4 @@ main {
     padding-top: 12px;
   }
 }
+

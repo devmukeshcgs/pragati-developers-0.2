@@ -7,23 +7,24 @@
   margin-top: 24px;
   display: flex;
   flex-direction: row;
-  gap: 12px;
+  gap: 0.5rem;
   flex-wrap: nowrap;
   align-content: center;
   align-items: stretch;
-  gap: 24px;
+  // gap: 24px;
 }
 .sec-4-content div {
   flex: 1;
-  padding: 24px 48px;
+  padding: 1rem 2rem;
   background: var(--accent);
+  border: 1px solid var(--text);
   display: flex;
   flex-direction: column;
   text-align: center;
   flex-wrap: nowrap;
 }
 .sec-4-content div h5 {
-  color: var(--bg);
+  // color: var(--bg);
   font-size: 36px;
   line-height: normal;
   letter-spacing: auto;
@@ -32,7 +33,7 @@
 }
 .sec-4-content div p {
   margin: 0px;
-  color: var(--bg);
+  // color: var(--bg);
   text-transform: uppercase;
 }
 

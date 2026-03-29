@@ -8,13 +8,7 @@ import SidePanel from "./components/SidePanel";
 import Footer from "./components/Footer";
 import Demo from "./Demo";
 import HomePage from "./HomePage";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link,
-  useParams,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navigation from "./components/Navigation";
 function App() {
   const {
@@ -69,16 +63,14 @@ function App() {
   };
 
   return (
-    <>
+    <Router>
       <Navigation />
-      <Router>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/demo" element={<Demo />} />
-        </Routes>
-      </Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/demo" element={<Demo />} />
+      </Routes>
       <Footer />
-    </>
+    </Router>
   );
 }
 

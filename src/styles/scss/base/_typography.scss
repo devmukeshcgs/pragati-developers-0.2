@@ -6,9 +6,7 @@
   font-style: normal;
 }
 
-.text-white {
-  color: var(--bg);
-}
+ 
 .text-blue {
   color: var(--accent);
 }
@@ -81,7 +79,7 @@ p {
   margin-top: 0;
   line-height: normal;
   letter-spacing: auto;
-  color: #1f2028;
+  color: var(--text)
 }
 
 .p-12 {

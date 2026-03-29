@@ -16,12 +16,11 @@ const Header = ({
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <header>
+    <div className="container">
       <nav className="flex justify-between items-center px-6 md:px-12 py-5 bg-white/80 backdrop-blur-md border-b sticky top-0 z-50">
-        {" "}
-        <div id="company-name">
+        {/* <div id="company-name">
           <b>🔺Apartment Tracker</b>
-        </div>
+        </div> */}
         <div className="controls">
           <select
             className="custom-select"
@@ -88,7 +87,7 @@ const Header = ({
           </select>
         </div>
       </nav>
-    </header>
+    </div>
   );
 };
 

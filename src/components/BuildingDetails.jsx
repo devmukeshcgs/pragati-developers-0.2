@@ -10,7 +10,7 @@ const BuildingDetails = ({
   return (
     <div id="building-details">
       <div className="building-info">
-        <h2 id="building-name">{buildingName ? `🏢 ${buildingName}` : ""}</h2>
+        <h5 id="building-name">{buildingName ? `🏢 ${buildingName}` : ""}</h5>
         {loading && <div className="loader">Loading data...</div>}
       </div>
       <div className="floor-info">

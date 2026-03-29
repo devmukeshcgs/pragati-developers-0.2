@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -21,17 +22,14 @@ export default function Hero() {
                 <img src="./images/arrow-right.svg" alt="" />
               </span>
             </button>
-            <button>
-              Demo
-              <span>
-                <img src="./images/arrow-right.svg" alt="" />
-              </span>
-            </button>
+            <Link className="link" to="/demo">
+              DEMO
+            </Link>
           </div>
         </div>
-        <div className="hero-image">
+        {/* <div className="hero-image">
           <img src="./images/logo-outline.png" alt="Hero Image" />
-        </div>
+        </div> */}
       </div>
     </div>
   );

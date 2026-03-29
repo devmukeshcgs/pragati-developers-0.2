@@ -7,7 +7,7 @@ export default function SectionSix() {
         <h2 className="sec-title">Featured Products</h2>
         <div className="slider">
           <button className="arrow prev">
-            <img src="./images/arrow-left-red.svg" alt="" srcset="" />
+            <img src="./images/arrow-left-red.svg" alt="" srcSet="" />
           </button>
           <div className="slider-track">
             <div className="sec-5-content">
@@ -17,7 +17,7 @@ export default function SectionSix() {
                   <img
                     src="./images/storage/file_cabinets-upd1.png"
                     alt=""
-                    srcset=""
+                    srcSet=""
                   />
                 </div>
                 <div className="card-content">
@@ -30,7 +30,7 @@ export default function SectionSix() {
                   <img
                     src="./images/storage/heavy_duty_storage_cabinets-upd1.png"
                     alt=""
-                    srcset=""
+                    srcSet=""
                   />
                 </div>
                 <div className="card-content">
@@ -43,7 +43,7 @@ export default function SectionSix() {
                   <img
                     src="./images/storage/standard_height_storage_cabinets-upd1.png"
                     alt=""
-                    srcset=""
+                    srcSet=""
                   />
                 </div>
                 <div className="card-content">
@@ -56,7 +56,7 @@ export default function SectionSix() {
                   <img
                     src="./images/storage/wall_mount_cabinets-upd1.png"
                     alt=""
-                    srcset=""
+                    srcSet=""
                   />
                 </div>
                 <div className="card-content">
@@ -69,7 +69,7 @@ export default function SectionSix() {
                   <img
                     src="./images/storage/counter_height_storage_cabinets-upd1.png"
                     alt=""
-                    srcset=""
+                    srcSet=""
                   />
                 </div>
                 <div className="card-content">
@@ -82,7 +82,7 @@ export default function SectionSix() {
                   <img
                     src="./images/storage/file_cabinets-upd1.png"
                     alt=""
-                    srcset=""
+                    srcSet=""
                   />
                 </div>
                 <div className="card-content">
@@ -95,7 +95,7 @@ export default function SectionSix() {
                   <img
                     src="./images/storage/heavy_duty_storage_cabinets-upd1.png"
                     alt=""
-                    srcset=""
+                    srcSet=""
                   />
                 </div>
                 <div className="card-content">
@@ -108,7 +108,7 @@ export default function SectionSix() {
                   <img
                     src="./images/storage/standard_height_storage_cabinets-upd1.png"
                     alt=""
-                    srcset=""
+                    srcSet=""
                   />
                 </div>
                 <div className="card-content">
@@ -121,7 +121,7 @@ export default function SectionSix() {
                   <img
                     src="./images/storage/wall_mount_cabinets-upd1.png"
                     alt=""
-                    srcset=""
+                    srcSet=""
                   />
                 </div>
                 <div className="card-content">
@@ -134,7 +134,7 @@ export default function SectionSix() {
                   <img
                     src="./images/storage/counter_height_storage_cabinets-upd1.png"
                     alt=""
-                    srcset=""
+                    srcSet=""
                   />
                 </div>
                 <div className="card-content">
@@ -144,7 +144,7 @@ export default function SectionSix() {
             </div>
           </div>
           <button className="arrow next">
-            <img src="./images/arrow-right-red.svg" alt="" srcset="" />
+            <img src="./images/arrow-right-red.svg" alt="" srcSet="" />
           </button>
         </div>
       </div>

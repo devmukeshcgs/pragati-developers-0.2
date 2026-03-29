@@ -19,6 +19,7 @@
 
 .container {
   display: flex;
+  flex-direction: column;
   gap: 0rem;
   align-items: stretch;
   align-content: center;
@@ -45,7 +46,18 @@
     color 0.3s ease,
     border-color 0.3s ease;
 } */
-
+.floor-info {
+  // min-height: 80vh;
+}
+.floor-plan-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  align-items: stretch;
+}
 .floor-plan {
   flex: 1;
   display: flex;
@@ -75,11 +87,12 @@
 
 .flats-list,
 .flat-details {
-  background: var(--side-panel-bg);
-  padding: 1rem;
-  border-radius: 0px;
-  transition: background-color 0.3s ease;
-  backdrop-filter: blur(10px);
+  padding: 12px;
+  // background: var(--side-panel-bg);
+  // padding: 1rem;
+  // border-radius: 0px;
+  // transition: background-color 0.3s ease;
+  // backdrop-filter: blur(10px);
   transition: filter 0.3s ease;
 }
 
@@ -108,9 +121,11 @@
 }
 
 .theme-toggle {
-  /* background: var(--button-bg);
-  border: 1px solid var(--select-border);
-  color: var(--select-color);
+  cursor: pointer;
+  margin: 0px;
+  //  background: var(--text);
+  color: var(--text);
+  /*  border: 1px solid var(--select-border);
   padding: 0.5rem 1rem;
   border-radius: 4px;
   cursor: pointer;
@@ -156,7 +171,7 @@
 }
 
 .read-the-docs {
-  color: #888;
+  color: var(--text);
 }
 #flat-info {
   display: flex;
@@ -170,17 +185,18 @@
   flex-direction: column;
   flex: 1;
   /* gap: 1rem; */
-  border: #a8a8a8 solid 1px;
-  border-radius: 4px;
-  padding: 0.5rem;
+  border: var(--border) solid 1px;
+  // border-radius: 4px;
+  padding: 1rem;
+  margin: 0.5rem;
 }
 .label {
   font-size: 0.9em;
-  color: #555;
+  color: var(--text);
 }
 .fd-val {
   font-size: 1.25em;
-  color: #535353;
+  color: var(--text);
 }
 /* button {
   border-radius: 8px;
@@ -202,7 +218,7 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 } */
- 
+
 @media (prefers-color-scheme: light) {
   :root {
     color: var(--text);
@@ -232,6 +248,7 @@ button:focus-visible {
     gap: 0.5rem;
   }
   .controls {
+    flex-direction: column;
     gap: 0.25rem;
     align-items: center;
   }
@@ -250,6 +267,9 @@ button:focus-visible {
   .building-info {
     text-align: center;
   }
+  .floor-plan-container{
+    flex-direction: column;
+  }
   .floor-info #floor-name {
     display: flex;
     display: flex;
@@ -259,6 +279,17 @@ button:focus-visible {
     justify-content: space-around;
     align-items: center;
   }
+
+  .fd {
+    padding: 0.5rem;
+  }
+  .label {
+    font-size: 0.75rem !important;
+  }
+  .fd-val {
+    font-size: 1rem;
+  }
+
   .floor-info #floor-name span {
     display: block;
     margin: 0.25rem 0;
@@ -272,9 +303,14 @@ button:focus-visible {
   }
   .floor-plan {
     width: 100vw;
+    height: 100vh;
   }
 
   .side-panel {
     width: 100%;
+    height: 100px;
+  }
+  footer {
+    display: none;
   }
 }

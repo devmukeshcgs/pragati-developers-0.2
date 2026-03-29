@@ -1,83 +1,86 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useTheme } from "../hooks/useTheme";
+import { Link } from "react-router-dom";
 
 export default function Navigation() {
   const { theme, toggleTheme } = useTheme();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const closeMobileMenu = () => setMobileMenuOpen(false);
+  const toggleMobileMenu = () => setMobileMenuOpen((open) => !open);
+
+  useEffect(() => {
+    if (!mobileMenuOpen) return;
+    const onKeyDown = (e) => {
+      if (e.key === "Escape") closeMobileMenu();
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [mobileMenuOpen]);
 
   return (
     <header>
-      <div class="container">
-        <div class="logo">
-          <img src="./images/logo.svg" alt="Logo" />
-        </div>
+      <div className="container">
+        <Link to="/" className="logo">
+          {theme === "dark" ? (
+            <img src="../images/logo-light.svg" alt="Logo" />
+          ) : (
+            <img src="../images/logo-dark.svg" alt="Logo" />
+          )}
+        </Link>
         <nav>
           <ul>
             <li>
-              <a href="/">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="/pricing">Pricing</a>
-            </li>
-            <li class="active">
-              <a href="/demo">Demo</a>
+              <Link to="/demo">Demo</Link>
             </li>
           </ul>
         </nav>
-        <div class="l-nav">
-          <a href="#">
+        <div className="l-nav">
+          {/* <a href="#">
             <img src="./images/user.svg" alt="user" />
-          </a>
-          <a href="#" class="docker">
+          </a> */}
+          <button
+            type="button"
+            className="docker"
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-menu"
+            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+            onClick={toggleMobileMenu}>
             <img
               src="./images/dockersvg.svg"
               width="24"
               height="24"
-              alt="cart"
+              alt=""
             />
-          </a>
-          <button className="theme-toggle" onClick={toggleTheme}>
-          <span className="theme-toggle-icon">
-            {theme === "dark" ? "☀️" : "🌙"}
-          </span>
-          {theme === "dark" ? "Light" : "Dark"}
-        </button>
+          </button>
+          <div className="theme-toggle" onClick={toggleTheme}>
+            <span className="theme-toggle-icon">
+              {theme === "dark" ? "☀️" : "🌙"}
+            </span>
+            {/* {theme === "dark" ? "Light" : "Dark"} */}
+          </div>
         </div>
       </div>
-      <nav class="mob-nav">
+      <nav
+        id="mobile-menu"
+        className={mobileMenuOpen ? "mob-nav open" : "mob-nav"}
+        aria-hidden={!mobileMenuOpen}>
         <ul>
           <li>
-            <a href="#">Home</a>
+            <Link to="/" onClick={closeMobileMenu}>
+              Home
+            </Link>
           </li>
           <li>
-            <a href="#">About</a>
-          </li>
-          <li class="active">
-            <a href="#">Contact</a>
+            <Link to="/demo" onClick={closeMobileMenu}>
+              Demo
+            </Link>
           </li>
         </ul>
       </nav>
     </header>
   );
-}
-{
-  /* <nav className="flex justify-between items-center px-8 py-6 bg-white shadow-sm sticky top-0 z-50">
-      <div className="text-2xl font-bold text-blue-700 underline decoration-4">
-        TheDotWebStudio
-      </div>
-      <a
-        href="mailto:thedotwebstudio@gmail.com"
-        className="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition">
-        Request Demo
-      </a>
-      <div className="flex">
-        <a href="/">Home</a>
-        <a href="/demo">Demo</a>
-        <button className="theme-toggle" onClick={toggleTheme}>
-          <span className="theme-toggle-icon">
-            {theme === "dark" ? "☀️" : "🌙"}
-          </span>
-          {theme === "dark" ? "Light" : "Dark"}
-        </button>
-      </div>
-    </nav> */
 }

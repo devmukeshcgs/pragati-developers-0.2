@@ -1,12 +1,13 @@
 .sec-title {
   text-align: center;
 }
+
 .sec-title::after {
   content: "";
   display: block;
   width: 64px;
   height: 4px;
-  background: var(--red);
+  background: var(--text);
   margin: 16px auto 0;
 }
 

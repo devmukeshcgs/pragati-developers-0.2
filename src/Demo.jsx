@@ -85,7 +85,7 @@ function Demo() {
             {error}
           </div>
         )}
-        <div className="container">
+        <div className="floor-plan-container">
           <FloorPlan
             svgData={svgData}
             onSvgLoad={handleSvgLoad}
