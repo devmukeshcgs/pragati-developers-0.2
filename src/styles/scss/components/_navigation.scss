@@ -14,7 +14,7 @@ header .container {
   flex-wrap: nowrap;
   padding: 10px 34px;
   @media (max-width: 1024px) {
-    padding: 20px 0;
+    padding: 0.5rem 0;
   }
   .logo {
     display: flex;
@@ -53,6 +53,9 @@ header .container {
     }
   }
 
+  header .container .l-nav .docker {
+    display: none;
+  }
   .l-nav {
     display: flex;
     flex-direction: row;
@@ -60,7 +63,7 @@ header .container {
     align-content: center;
     align-items: center;
     a,
-    button.docker {
+     .docker {
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
@@ -79,7 +82,7 @@ header .container {
       margin-bottom: 0;
       margin-right: 0;
     }
-    button.docker:hover {
+     .docker:hover {
       background: transparent;
       color: inherit;
     }

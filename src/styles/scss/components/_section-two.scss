@@ -33,8 +33,8 @@
   gap: 12px;
 }
 .f1-bg {
-  background: url("../../../images/outline2.png") no-repeat center center;
-  background-size: cover;
+  background: url("../../../images/excel.png") no-repeat center center;
+  background-size: fit;
   background-blend-mode: multiply;
   z-index: 1;
   backdrop-filter: var(--accent);
@@ -78,7 +78,7 @@
   background-blend-mode: multiply;
 }
 .f2-1-bg {
-  background: url("../../../images/outline.png") no-repeat center center;
+  // background: url("../../../images/outline.png") no-repeat center center;
   background-size: cover;
   z-index: 1;
   background-blend-mode: multiply;
