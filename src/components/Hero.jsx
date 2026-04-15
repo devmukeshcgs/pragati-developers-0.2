@@ -3,20 +3,27 @@ import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
-    <div className="hero-section hero-section-bg ">
+    <section className="hero-section hero-section-bg ">
+      <span className="hero-section-bg-overlay">
+        <img src="/images/hero-bg.png" alt="Hero Background" />
+      </span>
+
       <div className="container">
         <div className="hero-content">
           <h1>
-            <span className="h1-hilight">Transform Your Inventory into an</span>
-            <span>Interactive Sales Experience</span>
+            <span>Transform Your Inventory into an </span>
+            <span className="h1-hilight">
+              <b className="bold">Interactive Sales Experience</b>.
+            </span>
           </h1>
-          <p>
+          <br></br>
+          <h5>
             The ultimate mobile-first solution for Big Builders and Developers
             to <span className="p-hilight"> manage, visualize, and sell</span>{" "}
             apartments directly from your existing data.
-          </p>
+          </h5>
           <div className="cta">
-            <button className="btn-red">
+            <button className="btn-primary">
               20% OFF{" "}
               <span>
                 <img src="./images/arrow-right.svg" alt="" />
@@ -31,6 +38,6 @@ export default function Hero() {
           <img src="./images/logo-outline.png" alt="Hero Image" />
         </div> */}
       </div>
-    </div>
+    </section>
   );
 }

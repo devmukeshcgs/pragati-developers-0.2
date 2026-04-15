@@ -16,32 +16,44 @@ export default function SectionFour() {
         </p>
         <div className="sec-3-content">
           <div>
-            <h5>Reduce manual errors in inventory tracking</h5>
-            <p>
-              Durable shelving systems designed for heavy-duty storage and quick
-              access.
-            </p>
+            <img src="./images/3d-visualizations.png" alt="" srcSet="" />
+            <div>
+              <h5>Reduce manual errors in inventory tracking</h5>
+              <p>
+                Durable shelving systems designed for heavy-duty storage and
+                quick access.
+              </p>
+            </div>
           </div>
           <div>
-            <h5>Eliminate the need for expensive custom app development</h5>
-            <p>
-              Durable shelving systems designed for heavy-duty storage and quick
-              access.
-            </p>
+            <img src="./images/3d-visualizations.png" alt="" srcSet="" />
+            <div>
+              <h5>Eliminate the need for expensive custom app development</h5>
+              <p>
+                Durable shelving systems designed for heavy-duty storage and
+                quick access.
+              </p>
+            </div>
           </div>
           <div>
-            <h5>Present floorplans professionally on any device</h5>
-            <p>
-              Durable shelving systems designed for heavy-duty storage and quick
-              access.
-            </p>
+            <img src="./images/3d-visualizations.png" alt="" srcSet="" />
+            <div>
+              <h5>Present floorplans professionally on any device</h5>
+              <p>
+                Durable shelving systems designed for heavy-duty storage and
+                quick access.
+              </p>
+            </div>
           </div>
           <div>
-            <h5>Future-proof your sales with 3D interactivity</h5>
-            <p>
-              Durable shelving systems designed for heavy-duty storage and quick
-              access.
-            </p>
+            <img src="./images/3d-visualizations.png" alt="" srcSet="" />
+            <div>
+              <h5>Future-proof your sales with 3D interactivity</h5>
+              <p>
+                Durable shelving systems designed for heavy-duty storage and
+                quick access.
+              </p>
+            </div>
           </div>
         </div>
       </div>
