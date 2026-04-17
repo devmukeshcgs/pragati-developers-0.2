@@ -11,57 +11,50 @@ export default function SectionTwo() {
           {/* FEATURE 01 */}
           <div className="features">
             <div className="features-img">
-              <img src="./images/excel-01.png" alt="" srcSet="" />
+              <img src="./images/excel.svg" alt="" srcSet="" />
             </div>
             <div className="features-text">
-              <h4 className="text-white">Excel-Powered Backend</h4>
-              <p className="text-white">
-                Sync your existing Google Sheets or Excel files. No complex
-                databases required—update your sheet, update your app instantly.
+              <h4>Excel-Powered Backend</h4>
+              <p>Sync your existing Google Sheets or Excel files.</p>
+              <p>
+                No complex databases required—update your sheet, update your app
+                instantly.
               </p>
-              {/* <button className="btn-primary">
-                20% OFF Containers & Organizers{" "}
-                <span>
-                  <img src="./images/arrow-right.svg" alt="" />
-                </span>
-              </button> */}
             </div>
           </div>
           {/* FEATURE 02 */}
           <div className="features">
             <div className="features-img">
-              <img src="./images/floorplan-01.png" alt="" srcSet="" />
+              <img src="./images/floorplans.svg" alt="" srcSet="" />
             </div>
             <div className="features-text">
-              <h4 className="text-white">Interactive Floorplans</h4>
-              <p className="text-white">
+              <h4>Interactive Floorplans</h4>
+              <p>
                 Agents can select buildings and floors to view real-time
-                availability, area specs, and unit configurations (1BHK, 2BHK,
-                etc.).
+                availability, area specs, and unit configurations
               </p>
+              <p> 1BHK, 2BHK, etc.</p>
             </div>
           </div>
           {/* FEATURE 03 */}
           <div className="features">
             <div className="features-img">
-              <img src="./images/mobile-01.png" alt="" srcSet="" />
+              <img src="./images/mobile.svg" alt="" srcSet="" />
             </div>
             <div className="features-text">
-              <h4 className="text-white"> Instant Mobile Access</h4>
-              <p className="text-white">
-                A seamless web-app experience that works on any smartphone. Zero
-                friction for your sales team on the field.
-              </p>
+              <h4> Instant Mobile Access</h4>
+              <p>A seamless web-app experience that works on any smartphone.</p>
+              <p>Zero friction for your sales team on the field.</p>
             </div>
           </div>
           {/* FEATURE 04 */}
           <div className="features">
             <div className="features-img">
-              <img src="./images/3d-01.png" alt="" srcSet="" />
+              <img src="./images/3d.svg" alt="" srcSet="" />
             </div>
             <div className="features-text">
-              <h4 className="text-white">3D Visualizations</h4>
-              <p className="text-white">
+              <h4>3D Visualizations</h4>
+              <p>
                 A seamless web-app experience that works on any smartphone. Zero
                 friction for your sales team on the field.
               </p>
@@ -75,8 +68,8 @@ export default function SectionTwo() {
               <img src="./images/excel-01.png" alt="" srcSet="" />
             </div>
             <div className="f1-content p-24">
-              <h5 className="text-white">Excel-Powered Backend</h5>
-              <p className="text-white">
+              <h5 >Excel-Powered Backend</h5>
+              <p >
                 Sync your existing Google Sheets or Excel files. No complex
                 databases required—update your sheet, update your app instantly.
               </p>
@@ -94,8 +87,8 @@ export default function SectionTwo() {
                 <div>
                   <img src="./images/floorplan-01.png" alt="" srcSet="" />
                 </div>
-                <h5 className="text-white">Interactive Floorplans</h5>
-                <p className="text-white">
+                <h5 >Interactive Floorplans</h5>
+                <p >
                   Agents can select buildings and floors to view real-time
                   availability, area specs, and unit configurations (1BHK, 2BHK,
                   etc.).

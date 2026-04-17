@@ -24,7 +24,7 @@ export default function Hero() {
           </h5>
           <div className="cta">
             <button className="btn-primary">
-              20% OFF{" "}
+              3D DEMO
               <span>
                 <img src="./images/arrow-right.svg" alt="" />
               </span>
